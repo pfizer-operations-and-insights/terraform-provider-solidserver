@@ -35,10 +35,10 @@ var httpRequestTimings = map[string]struct {
 	sTimeout int
 	maxTry   int
 }{
-	"post":   {msSweep: 16, sTimeout: 10, maxTry: 1},
-	"put":    {msSweep: 16, sTimeout: 10, maxTry: 1},
-	"delete": {msSweep: 16, sTimeout: 10, maxTry: 1},
-	"get":    {msSweep: 16, sTimeout: 3, maxTry: 6},
+	"post":   {msSweep: 16, sTimeout: 120, maxTry: 1},
+	"put":    {msSweep: 16, sTimeout: 120, maxTry: 1},
+	"delete": {msSweep: 16, sTimeout: 120, maxTry: 1},
+	"get":    {msSweep: 16, sTimeout: 120, maxTry: 1},
 }
 
 const regexpIPPort = `^!?(([0-9]{1,3})\.){3}[0-9]{1,3}:[0-9]{1,5}$`
