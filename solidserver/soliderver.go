@@ -219,7 +219,7 @@ func (s *SOLIDserver) GetVersion(version string) diag.Diagnostics {
 		return diag.Errorf("Error retrieving SOLIDserver Version (%s)\n", err)
 	}
 
-	return diag.Errorf("Error retrieving SOLIDserver Version (No Answer)\n")
+	return diag.Errorf("Error retrieving SOLIDserver Version - empty response body, response status code: (%d)\n", resp.StatusCode)
 }
 
 func (s *SOLIDserver) Request(method string, service string, parameters *url.Values) (*http.Response, string, error) {
